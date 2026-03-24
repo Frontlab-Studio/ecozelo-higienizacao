@@ -3,11 +3,11 @@
 :root {
     --cor-primaria: #0A2540;
     --cor-secundaria: #00B4D8;
-    --cor-destaque: #25D366;
     --cor-fundo: #FAFAFA;
     --cor-fundo-header: rgba(255, 255, 255, 0.95);
     --cor-texto: #333333;
     --cor-texto-mutado: #666666;
+    --cor-destaque: #128C7E;
 
     --fonte-padrao: 'Inter', system-ui, -apple-system, sans-serif;
     --text-sm: clamp(0.875rem, 0.8vw + 0.5rem, 1rem);
@@ -45,6 +45,11 @@ body {
     width: 100vw;
     max-width: 100%;
     padding-top: var(--header-height);
+}
+
+*:focus-visible {
+    outline: 3px solid var(--cor-secundaria);
+    outline-offset: 3px;
 }
 
 h1,
@@ -2014,8 +2019,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     color: #FFFFFF;

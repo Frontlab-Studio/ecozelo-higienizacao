@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ecozelo Higienização | Limpeza de Estofados</title>
+
+    <meta name="description"
+        content="A Ecozelo Higienização devolve a vida aos seus móveis em Londrina e região. Remoção de manchas, ácaros e odores com secagem rápida e produtos seguros.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ecozelo.com.br/">
+
+    <title>Ecozelo Higienização | Limpeza de Estofados</title>
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="shortcut icon" href="assets/svg/logo.png" type="image/x-png">
 </head>
@@ -13,14 +19,14 @@
 
     <header class="header" id="header">
         <div class="container header-container">
-            <a href="#" class="logo" aria-label="AcquaClean Higienização - Início">
-                <img src="assets/svg/logo.png" alt="Ecozelo Higienização Logo" width="180" height="50" loading="eager"
-                    fetchpriority="high">
+            <a href="#" class="logo" aria-label="Ecozelo Higienização - Início"></a>
+            <img src="assets/svg/logo.png" alt="Ecozelo Higienização Logo" width="180" height="50" loading="eager"
+                fetchpriority="high">
             </a>
 
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação"
-                aria-expanded="false">
-                <span class="hamburger"></span>
+                aria-expanded="false" aria-controls="nav-menu"></button>
+            <span class="hamburger"></span>
             </button>
 
             <nav class="nav-menu" id="nav-menu">
@@ -41,9 +47,9 @@
 
         <section class="hero" id="inicio">
             <video autoplay loop muted playsinline class="hero-video" poster="poster-ecozelo-hero.webp"
-                fetchpriority="high">
-                <source src="assets/midia/Video-Ecozelo-Mobile.webm" type="video/mp4" media="(max-width: 768px)">
-                <source src="assets/midia/Video-Ecozelo-Desktop.webm" type="video/mp4">
+                fetchpriority="high" aria-hidden="true"></video>
+            <source src="assets/midia/Video-Ecozelo-Mobile.webm" type="video/mp4" media="(max-width: 768px)">
+            <source src="assets/midia/Video-Ecozelo-Desktop.webm" type="video/mp4">
             </video>
 
             <div class="hero-overlay"></div>
@@ -460,7 +466,7 @@
                             <div class="avatar-autor img-bg"
                                 style="background-image: url('assets/img/avatar-01.webp');"></div>
                             <div>
-                                <h4 class="nome-autor">Dra. Camila M.</h4>
+                                <h3 class="nome-autor">Dra. Camila M.</h3>
                                 <span class="cargo-autor">Diretora Clínica</span>
                             </div>
                         </div>
@@ -475,7 +481,7 @@
                             <div class="avatar-autor img-bg"
                                 style="background-image: url('assets/img/avatar-02.webp');"></div>
                             <div>
-                                <h4 class="nome-autor">Rafael S.</h4>
+                                <h3 class="nome-autor">Rafael S.</h3>
                                 <span class="cargo-autor">Cliente Residencial</span>
                             </div>
                         </div>
@@ -490,7 +496,7 @@
                             <div class="avatar-autor img-bg"
                                 style="background-image: url('assets/img/avatar-03.webp');"></div>
                             <div>
-                                <h4 class="nome-autor">Amanda T.</h4>
+                                <h3 class="nome-autor">Amanda T.</h3>
                                 <span class="cargo-autor">Cliente Residencial</span>
                             </div>
                         </div>
@@ -505,7 +511,7 @@
                             <div class="avatar-autor img-bg"
                                 style="background-image: url('assets/img/avatar-04.webp');"></div>
                             <div>
-                                <h4 class="nome-autor">Lucas V.</h4>
+                                <h3 class="nome-autor">Lucas V.</h3>
                                 <span class="cargo-autor">Gestor de RH</span>
                             </div>
                         </div>
@@ -531,7 +537,7 @@
                         <div class="item-contato">
                             <div class="icone-contato">📍</div>
                             <div>
-                                <h4 class="titulo-contato">Sede Operacional</h4>
+                                <h3 class="titulo-contato">Sede Operacional</h3>
                                 <p class="texto-contato">Gleba Palhano - Londrina, PR</p>
                                 <span class="micro-texto">(Atendimento exclusivo a domicílio/in loco)</span>
                             </div>
@@ -540,7 +546,7 @@
                         <div class="item-contato">
                             <div class="icone-contato">🕒</div>
                             <div>
-                                <h4 class="titulo-contato">Horário de Atendimento</h4>
+                                <h3 class="titulo-contato">Horário de Atendimento</h3>
                                 <p class="texto-contato">Segunda a Sábado: 08h às 18h</p>
                                 <span class="micro-texto">Horários especiais para clínicas corporativas mediante
                                     agendamento.</span>
@@ -550,10 +556,10 @@
                         <div class="item-contato">
                             <div class="icone-contato">📞</div>
                             <div>
-                                <h4 class="titulo-contato">Central de Agendamento</h4>
+                                <h3 class="titulo-contato">Central de Agendamento</h3>
                                 <p class="texto-contato destaque-texto">(43) 9105-2523</p>
 
-                                <p class="link-email">contato@ecozelo.com.br</p>
+                                <p class="link-email">ecozelohigienizacao@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -675,7 +681,7 @@
             </div>
 
             <div class="footer-coluna">
-                <h4 class="titulo-footer">Navegação</h4>
+                <h3 class="titulo-footer">Navegação</h3>
                 <ul class="lista-links-footer">
                     <li><a href="#solucao">Resultados (Antes e Depois)</a></li>
                     <li><a href="#sobre">Nossa Trajetória</a></li>
@@ -686,7 +692,7 @@
             </div>
 
             <div class="footer-coluna">
-                <h4 class="titulo-footer">Atendimento</h4>
+                <h3 class="titulo-footer">Atendimento</h3>
                 <ul class="lista-links-footer links-contato">
 
                     <li>
@@ -697,7 +703,7 @@
                     <li>
                         <span class="icone-footer">✉️</span>
                         <a href="mailto:contato@ecozelo.com.br" target="_blank"
-                            rel="external nofollow noopener noreferrer">contato@ecozelo.com.br</a>
+                            rel="external nofollow noopener noreferrer">ecozelohigienizacao@gmail.com</a>
                     </li>
                 </ul>
                 <div class="redes-sociais">
@@ -753,7 +759,7 @@
                 </svg>
             </div>
             <div class="cookie-texto-box">
-                <h4 class="cookie-titulo">Sua privacidade intacta.</h4>
+                <h3 class="cookie-titulo">Sua privacidade intacta.</h3>
                 <p class="cookie-texto">
                     Usamos cookies para garantir que sua experiência aqui seja tão impecável quanto a nossa
                     higienização.
