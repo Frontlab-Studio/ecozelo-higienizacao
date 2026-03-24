@@ -196,8 +196,8 @@ button {
 @media (width <=768px) {
     .mobile-menu-btn {
         display: block;
-        width: 30px;
-        height: 24px;
+        width: 48px;
+        height: 48px;
         position: relative;
     }
 
@@ -206,11 +206,27 @@ button {
     .hamburger::after {
         content: '';
         display: block;
-        width: 100%;
+        width: 30px;
         height: 2px;
         background-color: var(--cor-primaria);
         position: absolute;
         transition: transform 0.3s ease, opacity 0.3s ease;
+        left: 9px;
+    }
+
+    .hamburger {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger::before {
+        top: -8px;
+        left: 0;
+    }
+
+    .hamburger::after {
+        bottom: -8px;
+        left: 0;
     }
 
     .hamburger {
