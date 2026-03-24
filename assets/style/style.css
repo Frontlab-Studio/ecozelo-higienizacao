@@ -1373,8 +1373,30 @@ button {
 }
 
 @media (width <=1024px) {
+    .marquee-wrapper {
+        mask-image: none;
+        -webkit-mask-image: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .marquee-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .marquee-track {
+        animation: none !important;
+        width: max-content;
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+
     .card-depoimento {
+        width: 350px;
         padding: 1.5rem;
+        scroll-snap-align: center;
     }
 }
 
@@ -1385,11 +1407,16 @@ button {
 
     .marquee-wrapper {
         margin-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .marquee-track {
+        padding: 1rem 1.5rem;
+        gap: 1.5rem;
     }
 
     .card-depoimento {
-        width: 320px;
-        padding: 1.5rem;
+        width: 300px;
     }
 
     .texto-depoimento {
@@ -1398,8 +1425,14 @@ button {
 }
 
 @media (width <=360px) {
+    .marquee-track {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
     .card-depoimento {
-        width: 280px;
+        width: 270px;
+        padding: 1.25rem;
     }
 
     .texto-depoimento {
@@ -1801,7 +1834,6 @@ button {
 /* --- 14. COMPONENTE: FOOTER --- */
 .footer {
     background-color: #051320;
-    /* Tom ainda mais escuro que a primária para ancorar o site */
     color: rgba(255, 255, 255, 0.7);
     padding-top: clamp(4rem, 8vw, 6rem);
 }
@@ -1814,7 +1846,7 @@ button {
 }
 
 .logo-footer img {
-    max-height: 20px;
+
     margin-bottom: 1.5rem;
 
 }
