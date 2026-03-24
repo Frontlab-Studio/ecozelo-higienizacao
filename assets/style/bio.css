@@ -315,3 +315,87 @@ avatar-empresa {
     opacity: 1;
     transform: translateX(0);
 }
+
+/* --- AVISO DE COOKIES (BIO) --- */
+.cookie-box-bio {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    width: calc(100% - 3rem);
+    max-width: 400px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(10, 37, 64, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.25rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cookie-box-bio.mostrar {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: all;
+}
+
+.cookie-texto-bio {
+    font-size: 0.8rem;
+    color: var(--cor-texto-mutado);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.cookie-link-bio {
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cookie-link-bio:hover {
+    text-decoration: underline;
+}
+
+.btn-cookie-bio {
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.btn-cookie-bio:hover {
+    background-color: #0d3256;
+}
+
+.btn-cookie-bio:active {
+    transform: scale(0.95);
+}
+
+@media (width <=360px) {
+    .cookie-box-bio {
+        bottom: 1rem;
+        width: calc(100% - 2rem);
+        padding: 0.85rem 1rem;
+        gap: 0.75rem;
+    }
+
+    .cookie-texto-bio {
+        font-size: 0.75rem;
+    }
+
+    .btn-cookie-bio {
+        padding: 0.5rem 1rem;
+    }
+}
