@@ -8,6 +8,8 @@
     --cor-texto: #333333;
     --cor-texto-mutado: #666666;
     --cor-destaque: #128C7E;
+    --cor-secundaria-texto: #007A93; 
+    --cor-texto-mutado: #555555; 
 
     --fonte-padrao: 'Inter', system-ui, -apple-system, sans-serif;
     --text-sm: clamp(0.875rem, 0.8vw + 0.5rem, 1rem);
@@ -496,7 +498,7 @@ button {
 
 .tag-secao {
     background-color: rgba(0, 180, 216, 0.1);
-    color: var(--cor-secundaria);
+    color: var(--cor-secundaria-texto);
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1455,7 +1457,7 @@ button {
 
 .cargo-autor {
     font-size: 0.85rem;
-    color: var(--cor-secundaria);
+    color: var(--cor-secundaria-texto);
     font-weight: 600;
 }
 
