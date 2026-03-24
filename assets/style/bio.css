@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+:root {
+    --cor-primaria: #0A2540;
+    --cor-secundaria: #00B4D8;
+    --cor-destaque: #25D366;
+    --cor-fundo: #F8FAFC;
+    --cor-texto: #333333;
+    --cor-texto-mutado: #64748B;
+    --fonte-padrao: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bg-links {
+    background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
+}
+
+
+.container-bio {
+    width: 100%;
+    max-width: 480px;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- CABEÇALHO --- */
+.header-bio {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+avatar-empresa {
+    width: 200px;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-empresa img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: none;
+}
+
+.titulo-bio {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
+
+.desc-bio {
+    font-size: 0.95rem;
+    color: var(--cor-texto-mutado);
+    line-height: 1.5;
+}
+
+/* --- LINKS --- */
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card:active {
+    transform: scale(0.98);
+}
+
+.icone-link {
+    display: flex;
+    align-items: center;
+}
+
+.icone-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.link-card:not(.link-destaque) {
+    background-color: #FFFFFF;
+    color: var(--cor-primaria);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.link-card:not(.link-destaque):hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    background-color: #F8FAFC;
+}
+
+
+.link-destaque {
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+    box-shadow: 0 10px 25px rgba(10, 37, 64, 0.2);
+    border: 1px solid var(--cor-primaria);
+}
+
+.link-destaque:hover {
+    background-color: #0d3256;
+    box-shadow: 0 12px 30px rgba(10, 37, 64, 0.3);
+}
+
+
+.link-destaque::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(35deg);
+    transition: left 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.link-destaque:hover::after {
+    left: 120%;
+}
+
+/* --- FOOTER BIO --- */
+.footer-bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.redes-sociais-bio {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-social-bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #FFFFFF;
+    color: var(--cor-primaria);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-social-bio:hover {
+    transform: translateY(-3px);
+    color: var(--cor-secundaria);
+}
+
+.icon-social-bio svg {
+    width: 20px;
+    height: 20px;
+}
+
+.links-legais-bio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.links-legais-bio a {
+    color: var(--cor-texto-mutado);
+    text-decoration: none;
+}
+
+.links-legais-bio a:hover {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+}
+
+.separador-bio {
+    color: #CBD5E1;
+}
+
+/* Assinatura Frontlab */
+.mt-assinatura {
+    margin-top: 1rem;
+}
+
+.assinatura-agencia p {
+    font-size: 0.8rem;
+    color: var(--cor-texto-mutado);
+}
+
+.frontlab-signature {
+    position: relative;
+    font-family: monospace, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cor-primaria);
+    opacity: 0.7;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.frontlab-signature::before,
+.frontlab-signature::after {
+    content: '';
+    opacity: 0;
+    color: var(--cor-destaque);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.frontlab-signature::before {
+    content: '[';
+    transform: translateX(8px);
+}
+
+.frontlab-signature::after {
+    content: ']';
+    transform: translateX(-8px);
+}
+
+.status-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--cor-destaque);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(37, 211, 102, 0.5);
+    animation: serverPulse 2s infinite;
+}
+
+@keyframes serverPulse {
+    0% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(37, 211, 102, 0.8);
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+.frontlab-signature:hover {
+    opacity: 1;
+    color: var(--cor-destaque);
+}
+
+.frontlab-signature:hover::before,
+.frontlab-signature:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}

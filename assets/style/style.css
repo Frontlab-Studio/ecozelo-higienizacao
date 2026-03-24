@@ -2373,3 +2373,123 @@ button {
         font-size: 0.8rem;
     }
 }
+
+/* --- 16. PÁGINAS LEGAIS (PRIVACIDADE E TERMOS) --- */
+
+.pagina-legal {
+    background-color: var(--cor-fundo);
+    padding-top: var(--header-height);
+}
+
+.header-legal {
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-voltar-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--cor-texto-mutado);
+    transition: color 0.3s ease;
+}
+
+.btn-voltar-home:hover {
+    color: var(--cor-secundaria);
+}
+
+.container-legal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: clamp(4rem, 8vw, 6rem) var(--padding-container);
+}
+
+.conteudo-documento {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: clamp(2rem, 5vw, 4rem);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.cabecalho-documento {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.titulo-documento {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--cor-primaria);
+    line-height: 1.2;
+    margin: 1rem 0 0.5rem;
+}
+
+.data-atualizacao {
+    font-size: 0.9rem;
+    color: #94A3B8;
+}
+
+.texto-formatado {
+    color: var(--cor-texto);
+    line-height: 1.8;
+}
+
+.texto-formatado h2 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin: 2.5rem 0 1rem;
+}
+
+.texto-formatado p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.texto-formatado ul {
+    margin: 0 0 1.5rem 1.5rem;
+}
+
+.texto-formatado li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.texto-formatado strong {
+    color: var(--cor-primaria);
+}
+
+.footer-legal {
+    background-color: #051320;
+    padding: 1.5rem 0;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 4rem;
+}
+
+@media (width <=768px) {
+    .container-legal {
+        padding: 3rem var(--padding-container);
+    }
+
+    .conteudo-documento {
+        padding: 2rem 1.5rem;
+    }
+
+    .texto-formatado h2 {
+        font-size: 1.3rem;
+        margin: 2rem 0 1rem;
+    }
+}
+
+@media (width <=360px) {
+    .btn-voltar-home span {
+        display: none;
+    }
+
+    .conteudo-documento {
+        padding: 1.5rem 1rem;
+    }
+
+}
